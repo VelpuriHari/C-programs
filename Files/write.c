@@ -17,7 +17,7 @@ int main() {
     }
    */
 //fputc()	
-    while((c=getchar())!=EOF)
+    while((c=getchar())!='#')
     {
 	   fputc(c,fw);
     }
@@ -27,8 +27,13 @@ int main() {
 	{
 		printf("%c",ch);	
 	}
-	
-    fclose(fw); 
+    fclose(fw);
+     FILE *fr = fopen("sample.txt", "a");
+     int n;
+     while((scanf("%d",&n))!=EOF)
+     {
+         fprintf(fr,"%d\n",n);
+     }
     return 0;
 }
 	
