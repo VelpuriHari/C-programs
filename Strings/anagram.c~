@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int seen1[25]={0},seen2[25]={0};
+	char str1[100],str2[100];
+	printf("Entre string 1:");
+	scanf("%s",str1);
+	printf("Entre the string 2:");
+	scanf("%s",str2);
+	//printf("%d %d",strlen(str1),strlen(str2));
+	if(strlen(str1)!=strlen(str2))
+	{
+		printf("Not Anagram");
+		return 0;
+	}
+	for(int i=0;i<strlen(str1);i++)
+	{
+		seen1[str1[i]-'a']++;
+		seen2[str2[i]-'a']++;
+	}
+	for(int i=0;i<25;i++)
+	{
+	//	printf("%d %d\n",seen1[i],seen2[i]);
+		if(seen1[i]!=seen2[i])
+		{
+			printf(" Not Anagaram:");
+			return 0;
+		}
+	}
+	printf("Anagram");
+}

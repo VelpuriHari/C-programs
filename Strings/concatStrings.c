@@ -10,7 +10,7 @@ int main()
 	char str[strlen(str1)+strlen(str2)];
 	str1[strcspn(str1,"\n")]='\0';
 	int i=0;
-	while(i<(strlen(str1)+strlen(str2)))
+/*	while(i<(strlen(str1)+strlen(str2)))
 	{
 		if(i<strlen(str1))
 		{
@@ -23,7 +23,12 @@ int main()
 		//	printf("%c",str[i]);
 		}
 		i++;
+	}*/
+	i=strcspn(str1,"\0");
+	for(int j=0;j<=strlen(str2);j++)
+	{
+		str1[j+i]=str2[j];
 	}
-	printf("=>%s",str);
+	printf("=>%s",str1);
 }
 

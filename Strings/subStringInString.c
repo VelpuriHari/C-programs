@@ -18,6 +18,11 @@ int main(){
 			}
 		//	printf("%d",j);
 			if(j==strlen(str2)){
+			//	printf("%d %d",i,j);
+				for(int k=i;k<j+i;k++)
+				{
+					printf("%c",str[k]);
+				}
 				printf("Found");
 				flag=0;
 				break;
